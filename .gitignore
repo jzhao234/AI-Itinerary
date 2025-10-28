@@ -1,0 +1,12 @@
+# Python
+backend/venv/
+__pycache__/
+
+# Node (frontend)
+frontend/node_modules/
+
+# Env files
+.env
+
+#random notes
+notes.txt
