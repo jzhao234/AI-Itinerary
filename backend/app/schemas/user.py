@@ -1,13 +1,13 @@
 from pydantic import BaseModel
 
-class UserCreate(BaseModel):
+class UserBase(BaseModel):
     name: str
     email: str
 
-class UserRead(BaseModel):
+class UserCreate(UserBase):
+    password: str
+
+class UserRead(UserBase):
     id: int
-    name: str
-    email: str
-
     class Config:
-        from_attributes = True  # Replaces orm_mode in Pydantic v2
+        from_attributes = True
